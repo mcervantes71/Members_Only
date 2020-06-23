@@ -1,0 +1,26 @@
+<div class="container">
+  <h1 class='text-center mt-3 mb-2'>New Post</h1>
+
+  <%= form_for @post do |f| %>
+    <div class='form-group'>
+      <%= f.text_field :title, class: 'form-control', placeholder: 'Title here' %>
+    </div>
+    <div class='form-group'>
+      <%= f.text_area :body, class: 'form-control', placeholder: 'Body here' %>
+    </div>
+    <%= f.submit 'Save', class: 'btn btn-primary' %>
+    <%= link_to 'Cancel', root_path, class: 'btn btn-danger' %>
+  <% end %>
+
+  <% if @post.errors.any? %>
+     <div id='error_explanation' class='mt-2'>
+       <h2><span class='text-danger'><%= pluralize(@post.errors.count, 'error') %></span> prohibited this post from being saved:</h2>
+
+       <ul>
+         <% @post.errors.full_messages.each do |msg| %>
+           <li><%= msg %></li>
+         <% end %>
+       </ul>
+     </div>
+   <% end %>
+</div>
