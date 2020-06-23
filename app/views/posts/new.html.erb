@@ -3,12 +3,19 @@
 
   <%= form_for @post do |f| %>
     <div class='form-group'>
+      <%= f.number_field :user_id, value: current_user.id, :readonly => true %>
+    </div>
+
+    <div class='form-group'>
       <%= f.text_field :title, class: 'form-control', placeholder: 'Title here' %>
     </div>
+
     <div class='form-group'>
       <%= f.text_area :body, class: 'form-control', placeholder: 'Body here' %>
     </div>
-    <%= f.submit 'Save', class: 'btn btn-primary' %>
+
+    <%= f.submit 'Submit', class: 'btn btn-primary' %>
+
     <%= link_to 'Cancel', root_path, class: 'btn btn-danger' %>
   <% end %>
 
