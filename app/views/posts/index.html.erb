@@ -1,19 +1,23 @@
 <div class="container">
   <h1 class="text-center mt-3 mb-2">All Posts</h1>
 
-  <%= link_to 'New Post', new_post_path, class: 'btn btn-success my-2' %>
+  <% if current_user %>
+    <%= link_to 'New Post', new_post_path, class: 'btn btn-success my-2' %>
+  <% end %>
 
   <% @posts.each do |post| %>
-  <div class="card mb-2">
-    <div class="card-header bg-primary">
-      <h4 class="text-white font-weight-bolder"><%= post.title %></h4>
-    </div>
-    <div class="card-body">
-      <p><%= post.body %></p>
-      <p>Author: <%= post.user.full_name %></p>
-    </div>
-  </div>
+    <div class="card mb-2">
+      <div class="card-header bg-primary">
+        <h4 class="text-white font-weight-bolder"><%= post.title %></h4>
+      </div>
 
+      <div class="card-body">
+        <p><%= post.body %></p>
 
+        <% if current_user %>
+          <p>Author: <%= post.user.full_name %></p>
+        <% end %>
+      </div>
+    </div>
   <% end %>
 </div>
