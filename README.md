@@ -58,6 +58,7 @@ Run:
 ``
 yarn install --check-files
 ``
+
 In the browser navigate to `http://localhost:3000`
 
 ## :busts_in_silhouette: Authors
