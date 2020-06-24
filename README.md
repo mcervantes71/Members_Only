@@ -20,7 +20,7 @@ In this project we used Device gem to handle authentication in rails. We built a
 
 ### Prerequisites
 
-Must have Ruby install on your local machine (preferably version 2.6.6)
+Must have Ruby install on your local machine (preferably version 2.6.6)\
 For testing must have RSpec install
 
 ### Installation
