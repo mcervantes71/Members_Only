@@ -2,7 +2,7 @@
 
 In this project we used Device gem to handle authentication in rails. We built and application that allows users to create posts and the authors of the posts are displayed only if they are logged in.
 
-![screenshot](./app/assets/images/Screenshot.png)
+![screenshot](./app/assets/images/ScreenShot.png)
 
 ## :package: Built With
 
