@@ -9,7 +9,7 @@ In this project we used Device gem to handle authentication in rails. We built a
     - Ruby
     - Ruby on Rails
     - Heroku
-    - Device
+    - Devise
 
 ## :mag: Live Demo
 
